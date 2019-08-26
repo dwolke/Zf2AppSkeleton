@@ -1,0 +1,53 @@
+<h1><?php echo $this->translate('Ein Fehler ist aufgetreten.') ?></h1>
+<h2><?php echo $this->message ?></h2>
+
+<?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
+
+  <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
+    <hr/>
+    <h2><?php echo $this->translate('Zusätzliche Informationen') ?>:</h2>
+    <h3><?php echo get_class($this->exception); ?></h3>
+    <dl>
+      <dt><?php echo $this->translate('Datei') ?>:</dt>
+      <dd><pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre></dd>
+      <dt><?php echo $this->translate('Meldung') ?>:</dt>
+      <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getMessage()) ?></pre></dd>
+      <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
+      <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) ?></pre></dd>
+    </dl>
+    <?php
+      $e = $this->exception->getPrevious();
+      $icount = 0;
+      if ($e) :
+    ?>
+      <hr/>
+      <h2><?php echo $this->translate('Vorherige Ausnahme(n)') ?>:</h2>
+      <ul class="unstyled">
+        <?php while($e) : ?>
+          <li>
+            <h3><?php echo get_class($e); ?></h3>
+            <dl>
+              <dt><?php echo $this->translate('Datei') ?>:</dt>
+              <dd><pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre></dd>
+              <dt><?php echo $this->translate('Meldung') ?>:</dt>
+              <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getMessage()) ?></pre></dd>
+              <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
+              <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre></dd>
+            </dl>
+          </li>
+          <?php
+            $e = $e->getPrevious();
+            $icount += 1;
+            if ($icount >= 50) {
+              echo sprintf($this->translate('Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht über ausreichend Speicher, um diese anzuzeigen.'), '<li>', '</li>');
+              break;
+            }
+            endwhile;
+        ?>
+      </ul>
+    <?php endif; ?>
+  <?php else: ?>
+    <h3><?php echo $this->translate('Es ist keine Ausnahme verfügbar.') ?></h3>
+  <?php endif ?>
+
+<?php endif ?>

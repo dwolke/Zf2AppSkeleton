@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ZfMailerApp\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-05 13:45+0200\n"
+"PO-Revision-Date: 2019-08-05 13:46+0200\n"
+"Last-Translator: Daniel Wolkenhauer <hello@dw-labs.de>\n"
+"Language-Team: dwLabs <hello@dw-labs.de>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../view/application/index/index.phtml:3
+#, php-format
+msgid ""
+"ZfMailer ist ein einfaches Modul zum Versand von E-Mails über das Zend "
+"Framework. Diese Version von ZfMailer läuft unter Zend Framework Version %s."
+msgstr ""
+"ZfMailer is a simple Mailer module for Zend Framework. This Version of "
+"ZfMailer runs on Zend Framework Version %s."
+
+#: ../view/application/index/index.phtml:10
+msgid "Funktionen"
+msgstr "Features"
+
+#: ../view/application/index/index.phtml:23
+msgid "Folge der Entwicklung"
+msgstr "Follow Development"
+
+#: ../view/application/index/index.phtml:25
+msgid ""
+"ZfMailer wird ständig weiterentwickelt. Solltest Du Interesse haben, die "
+"Entwicklung zu verfolgen oder bei der Entwicklung aktiv mitzuwirken, steht "
+"dir der Quelltext auf Github zur Verfügung."
+msgstr ""
+"ZMailer is constantly evolving. If you are interested in following the "
+"development or actively participating in the development, you will find the "
+"source code available on GitHub."
+
+#: ../view/application/index/index.phtml:26
+msgid "ZfMailer auf GitHub"
+msgstr "ZfMailer on GitHub"
+
+#: ../view/application/index/index.phtml:33
+msgid "Hilfe &amp; Support"
+msgstr "Help &amp; Support"
+
+#: ../view/application/index/index.phtml:35
+#, php-format
+msgid ""
+"Solltest Du Hilfe bei der Verwendung des ZfMailers benötigen, kontaktiere "
+"uns einfach über %sSlack%s."
+msgstr ""
+"If you Need help on using ZfMailer, please feel free to contact us via "
+"%sSlack%s."
+
+#: ../view/application/index/index.phtml:36
+msgid "Kontaktiere uns"
+msgstr "Get in touch"
+
+#: ../view/error/404.phtml:1
+msgid "Es trat ein 404 Fehler auf"
+msgstr "A 404 error occured"
+
+#: ../view/error/404.phtml:12
+msgid ""
+"Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
+msgstr "The requested Controller was unable to dispatch the request."
+
+#: ../view/error/404.phtml:15
+msgid ""
+"Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
+"werden."
+msgstr ""
+"The requested Controller could not be mapped to an existing controller class."
+
+#: ../view/error/404.phtml:18
+msgid "Der angeforderte Controller ist nicht aufrufbar."
+msgstr "The requrested Controller is not dispatchable."
+
+#: ../view/error/404.phtml:21
+msgid "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden."
+msgstr "The requested Url could not be matched by routing."
+
+#: ../view/error/404.phtml:24
+msgid ""
+"Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
+"Fehler aufgetreten ist."
+msgstr "We really don't know, why the error occured."
+
+#: ../view/error/404.phtml:36
+msgid "Controller"
+msgstr "Controller"
+
+#: ../view/error/404.phtml:40
+#, php-format
+msgid "wird aufgelöst in %s"
+msgstr "resolves to %s"
+
+#: ../view/error/404.phtml:51 ../view/error/index.phtml:8
+msgid "Zusätzliche Informationen"
+msgstr "Additional information"
+
+#: ../view/error/404.phtml:54 ../view/error/404.phtml:73
+#: ../view/error/index.phtml:11 ../view/error/index.phtml:30
+msgid "Datei"
+msgstr "File"
+
+#: ../view/error/404.phtml:56 ../view/error/404.phtml:75
+#: ../view/error/index.phtml:13 ../view/error/index.phtml:32
+msgid "Meldung"
+msgstr "Message"
+
+#: ../view/error/404.phtml:58 ../view/error/404.phtml:77
+#: ../view/error/index.phtml:15 ../view/error/index.phtml:34
+msgid "Stapelüberwachung"
+msgstr "Stack trace"
+
+#: ../view/error/404.phtml:67
+msgid "Vorherige Ausnahmen"
+msgstr "Previous Exception"
+
+#: ../view/error/404.phtml:85 ../view/error/index.phtml:42
+msgid ""
+"Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht "
+"über ausreichend Speicher, um diese anzuzeigen."
+msgstr ""
+"There may be more exceptions, but we don't have enough space to process them."
+
+#: ../view/error/404.phtml:93
+msgid "Es ist keine Ausnahme verfügbar"
+msgstr "No Exception available"
+
+#: ../view/error/index.phtml:1
+msgid "Ein Fehler ist aufgetreten."
+msgstr "An error occured."
+
+#: ../view/error/index.phtml:24
+msgid "Vorherige Ausnahme(n)"
+msgstr "Previous Exception(s)"
+
+#: ../view/error/index.phtml:50
+msgid "Es ist keine Ausnahme verfügbar."
+msgstr "No Exception available."
+
+#: ../view/layout/layout.phtml:35
+msgid "ZfMailer"
+msgstr "ZfMailer"
+
+#: ../view/layout/layout.phtml:39
+msgid "Startseite"
+msgstr "Home"
+
+#: ../view/layout/layout.phtml:48
+msgid "Alle Rechte vorbehalten."
+msgstr "All Rights reserved."

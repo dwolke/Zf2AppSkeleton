@@ -1,0 +1,82 @@
+<?php
+  
+  //Page Title
+  $this->headTitle('ZfMailer');
+  $this->headTitle($this->translate('Test-App'))->setSeparator(' - ')->setAutoEscape(false);
+  
+  //Meta Tags
+  $this->headMeta()->appendName('description','ZfMailer Test-Applikation')
+                  ->appendName('author', 'Daniel Wolkenhauer')
+                  ->appendName('viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no')
+                  ->appendName('apple-mobile-web-app-capable', 'yes')
+                  ->appendName('apple-mobile-web-app-status-bar-style','black');
+
+  $this->headLink(array(
+    'rel' => 'icon',
+    'extras' => array(
+      'type' => 'image/svg+xml',
+      'sizes' => 'any'
+    ),
+    'href' => $this->basePath('img/favicon.svg'),
+  ));
+
+  $this->headLink()->prependStylesheet($this->basePath('css/style.css'))
+                  ->prependStylesheet($this->basePath('css/bootstrap.css'));
+
+?>
+
+<?php echo $this->doctype(); ?>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <?php
+    echo $this->headTitle();
+    echo $this->headMeta();
+    echo $this->headLink();
+  ?>
+</head>
+
+<body>
+
+  <header>
+  
+    <div class=" bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-4">
+            <h4 class="text-white">About</h4>
+            <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4">
+            <h4 class="text-white">Links</h4>
+            <ul class="list-unstyled">
+              <li><a class="text-white" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Startseite') ?></a></li>
+              <li><a class="text-white" href="_doc" target="_blank">Documentation</a></li>
+              <li><a class="text-white" href="_tests" target="_blank">Tests</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main role="main">
+    <?php echo $this->content; ?>
+  </main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right"><a href="#">Back to top</a></p>
+      <p>&copy; 2005 - <?php echo date('Y') ?> by dwLabs <?php echo $this->translate('Alle Rechte vorbehalten.') ?></p>
+    </div>
+  </footer>
+
+  <?php
+    $this->inlineScript()->prependFile($this->basePath('js/bootstrap.bundle.js'))
+                            ->prependFile($this->basePath('js/jquery-3.4.1.js'));
+  ?>
+  <?php echo $this->inlineScript() ?>
+  
+</body>
+</html>
