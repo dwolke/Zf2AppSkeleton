@@ -1,20 +1,22 @@
-ZfMailerApp
-=======================
+# ZF2 App Skeleton
+> Skeleton application for ZF2 MVC projects
 
-Testanwendung für [ZfMailer](https://github.com/dwolke/ZfMailer).
+## Einführung
+
+Dies ist ein Gerüst für Zend Framework 2 basierte Anwendungen, die auf dem MVC-Layer des Zend Frameworks aufsetzen. Grundlage ist die ZendSkeletonApplication des Zend Frameworks, die an einigen Punkten modifiziert und an eigene Bedürfnisse angepasst wurde.
 
 ## Installation
 
 ### Download
 
 ```bash
-$ git clone git@github.com:dwolke/ZfMailerApp.git
+$ git clone git@github.com:dwolke/Zf2AppSkeleton.git
 ```
 
 ### Installation mit Composer
 
 ```bash
-$ cd ZfMailerApp
+$ cd Zf2AppSkeleton
 $ composer update
 ```
 
@@ -25,20 +27,15 @@ Webserver Setup
 	
 	ServerName your.website.com
     ServerAdmin you@website.com
-    DocumentRoot /pfad/zum/webverzeichnis/zfmailerapp/public
+    DocumentRoot /pfad/zum/webverzeichnis/Zf2AppSkeleton/public
 
-    ErrorLog /var/log/apache2/zfmailerapp-error.log
-    CustomLog /var/log/apache2/zfmailerapp-access.log common
+    ErrorLog /var/log/apache2/zfapp-error.log
+    CustomLog /var/log/apache2/zfapp-access.log common
 
-    <Directory "/pfad/zum/webverzeichnis/zfmailerapp/public">
+    <Directory "/pfad/zum/webverzeichnis/Zf2AppSkeleton/public">
         Require all granted
         AllowOverride All
     </Directory>
-
-    # Falls PHP via FPM eingerichtet ist (dringend empfohlen!!!)
-    <FilesMatch \.php$>
-        SetHandler "proxy:fcgi://127.0.0.1:9000"
-    </FilesMatch>
 
 </VirtualHost>
 ```
