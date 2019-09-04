@@ -1,13 +1,13 @@
 {
-    "name": "dwolke/zfmailer-app",
-    "description": "Test-App für ZfMailer",
+    "name": "dwolke/zf2appskeleton",
+    "description": "App Skeleton für Zend Framework 2",
     "license": "MIT",
     "keywords": [
-        "mailer",
-        "framework",
-        "zf2"
+        "zend framework",
+        "zf2",
+        "App Skeleton"
     ],
-    "homepage": "http://zfmailer.dw-labs.de",
+    "homepage": "http://dw-labs.de",
     "require": {
         "php": ">=7.1",
         "zendframework/zendframework": "~2.4"
