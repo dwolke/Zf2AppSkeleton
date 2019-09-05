@@ -1,0 +1,32 @@
+{
+  "name": "zf2appskeleton",
+  "version": "1.0.0",
+  "description": "App Skeleton for Zend Framework 2 MVC-Apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwolke/ZfAppSkeleton.git"
+  },
+  "keywords": [
+    "zendframework",
+    "zf2",
+    "zf3",
+    "mvc",
+    "skeleton-application"
+  ],
+  "author": "Daniel Wolkenhauer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwolke/ZfAppSkeleton/issues"
+  },
+  "homepage": "https://github.com/dwolke/ZfAppSkeleton#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
