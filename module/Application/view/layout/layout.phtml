@@ -20,8 +20,9 @@
     'href' => $this->basePath('img/favicon.svg'),
   ));
 
-  $this->headLink()->prependStylesheet($this->basePath('css/style.css'))
-                  ->prependStylesheet($this->basePath('css/bootstrap.css'));
+  // $this->headLink()->prependStylesheet($this->basePath('css/style.css'))
+  //                 ->prependStylesheet($this->basePath('css/bootstrap.css'));
+  $this->headLink()->prependStylesheet($this->basePath('css/base.css'))
 
 ?>
 
@@ -38,37 +39,78 @@
 
 <body>
 
-  <header>
-  
-    <div class=" bg-dark" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4">
-            <h4 class="text-white">About</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-          </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Links</h4>
-            <ul class="list-unstyled">
-              <li><a class="text-white" href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Startseite') ?></a></li>
-              <li><a class="text-white" href="_doc" target="_blank">Documentation</a></li>
-              <li><a class="text-white" href="_tests" target="_blank">Tests</a></li>
-            </ul>
-          </div>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../../../../img/zf-logo-mark.png" alt="" height="40px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Startseite
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">UI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Documentation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tests</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-  </header>
+  <?php echo $this->content; ?>
 
-  <main role="main">
-    <?php echo $this->content; ?>
-  </main>
-
-  <footer class="text-muted">
+  <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="float-right"><a href="#">Back to top</a></p>
-      <p>&copy; 2005 - <?php echo date('Y') ?> by dwLabs <?php echo $this->translate('Alle Rechte vorbehalten.') ?></p>
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="#">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
 
