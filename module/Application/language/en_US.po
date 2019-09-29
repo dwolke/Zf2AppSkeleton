@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZfMailerApp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-05 13:45+0200\n"
-"PO-Revision-Date: 2019-08-05 13:46+0200\n"
+"POT-Creation-Date: 2019-09-29 16:21+0200\n"
+"PO-Revision-Date: 2019-09-29 16:26+0200\n"
 "Last-Translator: Daniel Wolkenhauer <hello@dw-labs.de>\n"
 "Language-Team: dwLabs <hello@dw-labs.de>\n"
 "Language: en_US\n"
@@ -12,127 +12,95 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../view/application/index/index.phtml:3
+#: ../view/application/index/index.phtml:5
+msgid "Willkommen zum Zend Framework 2"
+msgstr "Welcome to Zend Framework 2"
+
+#: ../view/application/index/index.phtml:6
 #, php-format
 msgid ""
-"ZfMailer ist ein einfaches Modul zum Versand von E-Mails über das Zend "
-"Framework. Diese Version von ZfMailer läuft unter Zend Framework Version %s."
+"Herzlichen Glückwunsch, Deine App ist betriebsbereit! Diese Vorlage hilft "
+"Dir dabei, Deine Zend Framework 2 Anwendungen schnell zum Laufen zu bringen."
+"<br /><br />Aktuell hast Du die Version <strong>%s</strong> des Zend "
+"Frameworks installiert."
 msgstr ""
-"ZfMailer is a simple Mailer module for Zend Framework. This Version of "
-"ZfMailer runs on Zend Framework Version %s."
+"Congratulations! Your App is ready. This template will help you get your "
+"Zend Framework 2 applications up and running.<br /><br />Currently you have "
+"the version <strong>%s</strong> of Zend Framework installed."
 
-#: ../view/application/index/index.phtml:10
-msgid "Funktionen"
-msgstr "Features"
-
-#: ../view/application/index/index.phtml:23
-msgid "Folge der Entwicklung"
-msgstr "Follow Development"
-
-#: ../view/application/index/index.phtml:25
-msgid ""
-"ZfMailer wird ständig weiterentwickelt. Solltest Du Interesse haben, die "
-"Entwicklung zu verfolgen oder bei der Entwicklung aktiv mitzuwirken, steht "
-"dir der Quelltext auf Github zur Verfügung."
-msgstr ""
-"ZMailer is constantly evolving. If you are interested in following the "
-"development or actively participating in the development, you will find the "
-"source code available on GitHub."
-
-#: ../view/application/index/index.phtml:26
-msgid "ZfMailer auf GitHub"
-msgstr "ZfMailer on GitHub"
-
-#: ../view/application/index/index.phtml:33
-msgid "Hilfe &amp; Support"
-msgstr "Help &amp; Support"
-
-#: ../view/application/index/index.phtml:35
-#, php-format
-msgid ""
-"Solltest Du Hilfe bei der Verwendung des ZfMailers benötigen, kontaktiere "
-"uns einfach über %sSlack%s."
-msgstr ""
-"If you Need help on using ZfMailer, please feel free to contact us via "
-"%sSlack%s."
-
-#: ../view/application/index/index.phtml:36
-msgid "Kontaktiere uns"
-msgstr "Get in touch"
-
-#: ../view/error/404.phtml:1
+#: ../view/error/404.phtml:4
 msgid "Es trat ein 404 Fehler auf"
 msgstr "A 404 error occured"
 
-#: ../view/error/404.phtml:12
+#: ../view/error/404.phtml:15
 msgid ""
 "Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
 msgstr "The requested Controller was unable to dispatch the request."
 
-#: ../view/error/404.phtml:15
+#: ../view/error/404.phtml:18
 msgid ""
 "Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
 "werden."
 msgstr ""
 "The requested Controller could not be mapped to an existing controller class."
 
-#: ../view/error/404.phtml:18
+#: ../view/error/404.phtml:21
 msgid "Der angeforderte Controller ist nicht aufrufbar."
 msgstr "The requrested Controller is not dispatchable."
 
-#: ../view/error/404.phtml:21
+#: ../view/error/404.phtml:24
 msgid "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden."
 msgstr "The requested Url could not be matched by routing."
 
-#: ../view/error/404.phtml:24
+#: ../view/error/404.phtml:27
 msgid ""
 "Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
 "Fehler aufgetreten ist."
 msgstr "We really don't know, why the error occured."
 
-#: ../view/error/404.phtml:36
+#: ../view/error/404.phtml:39
 msgid "Controller"
 msgstr "Controller"
 
-#: ../view/error/404.phtml:40
+#: ../view/error/404.phtml:43
 #, php-format
 msgid "wird aufgelöst in %s"
 msgstr "resolves to %s"
 
-#: ../view/error/404.phtml:51 ../view/error/index.phtml:8
+#: ../view/error/404.phtml:54 ../view/error/index.phtml:8
 msgid "Zusätzliche Informationen"
 msgstr "Additional information"
 
-#: ../view/error/404.phtml:54 ../view/error/404.phtml:73
+#: ../view/error/404.phtml:57 ../view/error/404.phtml:76
 #: ../view/error/index.phtml:11 ../view/error/index.phtml:30
 msgid "Datei"
 msgstr "File"
 
-#: ../view/error/404.phtml:56 ../view/error/404.phtml:75
+#: ../view/error/404.phtml:59 ../view/error/404.phtml:78
 #: ../view/error/index.phtml:13 ../view/error/index.phtml:32
 msgid "Meldung"
 msgstr "Message"
 
-#: ../view/error/404.phtml:58 ../view/error/404.phtml:77
+#: ../view/error/404.phtml:61 ../view/error/404.phtml:80
 #: ../view/error/index.phtml:15 ../view/error/index.phtml:34
 msgid "Stapelüberwachung"
 msgstr "Stack trace"
 
-#: ../view/error/404.phtml:67
+#: ../view/error/404.phtml:70
 msgid "Vorherige Ausnahmen"
 msgstr "Previous Exception"
 
-#: ../view/error/404.phtml:85 ../view/error/index.phtml:42
+#: ../view/error/404.phtml:88 ../view/error/index.phtml:42
 msgid ""
 "Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht "
 "über ausreichend Speicher, um diese anzuzeigen."
 msgstr ""
 "There may be more exceptions, but we don't have enough space to process them."
 
-#: ../view/error/404.phtml:93
+#: ../view/error/404.phtml:96
 msgid "Es ist keine Ausnahme verfügbar"
 msgstr "No Exception available"
 
@@ -148,14 +116,79 @@ msgstr "Previous Exception(s)"
 msgid "Es ist keine Ausnahme verfügbar."
 msgstr "No Exception available."
 
-#: ../view/layout/layout.phtml:35
-msgid "ZfMailer"
-msgstr "ZfMailer"
+#: ../view/layout/layout.phtml:5
+msgid "App Skeleton"
+msgstr "App Skeleton"
 
-#: ../view/layout/layout.phtml:39
+#: ../view/layout/layout.phtml:54
 msgid "Startseite"
 msgstr "Home"
 
-#: ../view/layout/layout.phtml:48
-msgid "Alle Rechte vorbehalten."
-msgstr "All Rights reserved."
+#: ../view/layout/layout.phtml:62
+msgid "Dokumentation"
+msgstr "Documentation"
+
+#: ../view/layout/layout.phtml:65
+msgid "Tests"
+msgstr "Tests"
+
+#: ../view/layout/layout.phtml:80
+msgid "Über uns"
+msgstr "About"
+
+#: ../view/layout/layout.phtml:84
+msgid "Kontakt"
+msgstr "Contact"
+
+#: ../view/layout/layout.phtml:88
+msgid "Nutzungsbedingungen"
+msgstr "Terms of Use"
+
+#: ../view/layout/layout.phtml:92
+msgid "Datenschutz"
+msgstr "Privacy Policy"
+
+#: ../view/layout/layout.phtml:95
+msgid "&copy; dwLabs 2019. Alle Rechte vorbehalten."
+msgstr "&copy; Your Website 2019. All Rights Reserved."
+
+#, php-format
+#~ msgid ""
+#~ "ZfMailer ist ein einfaches Modul zum Versand von E-Mails über das Zend "
+#~ "Framework. Diese Version von ZfMailer läuft unter Zend Framework Version "
+#~ "%s."
+#~ msgstr ""
+#~ "ZfMailer is a simple Mailer module for Zend Framework. This Version of "
+#~ "ZfMailer runs on Zend Framework Version %s."
+
+#~ msgid "Funktionen"
+#~ msgstr "Features"
+
+#~ msgid "Folge der Entwicklung"
+#~ msgstr "Follow Development"
+
+#~ msgid ""
+#~ "ZfMailer wird ständig weiterentwickelt. Solltest Du Interesse haben, die "
+#~ "Entwicklung zu verfolgen oder bei der Entwicklung aktiv mitzuwirken, "
+#~ "steht dir der Quelltext auf Github zur Verfügung."
+#~ msgstr ""
+#~ "ZMailer is constantly evolving. If you are interested in following the "
+#~ "development or actively participating in the development, you will find "
+#~ "the source code available on GitHub."
+
+#~ msgid "ZfMailer auf GitHub"
+#~ msgstr "ZfMailer on GitHub"
+
+#~ msgid "Hilfe &amp; Support"
+#~ msgstr "Help &amp; Support"
+
+#, php-format
+#~ msgid ""
+#~ "Solltest Du Hilfe bei der Verwendung des ZfMailers benötigen, kontaktiere "
+#~ "uns einfach über %sSlack%s."
+#~ msgstr ""
+#~ "If you Need help on using ZfMailer, please feel free to contact us via "
+#~ "%sSlack%s."
+
+#~ msgid "ZfMailer"
+#~ msgstr "ZfMailer"

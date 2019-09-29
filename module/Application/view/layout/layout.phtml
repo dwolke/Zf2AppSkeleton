@@ -11,17 +11,20 @@
                   ->appendName('apple-mobile-web-app-capable', 'yes')
                   ->appendName('apple-mobile-web-app-status-bar-style','black');
 
-  $this->headLink(array(
-    'rel' => 'icon',
-    'extras' => array(
-      'type' => 'image/svg+xml',
-      'sizes' => 'any'
-    ),
-    'href' => $this->basePath('img/favicon.svg'),
-  ));
+  $favicon32 = array('rel' => 'icon', 'extras' => array('type' => 'image/png', 'sizes' => '32x32'), 'href' => $this->basePath('img/favicon-32x32.png'));
+  $favicon16 = array('rel' => 'icon', 'extras' => array('type' => 'image/png', 'sizes' => '16x16'), 'href' => $this->basePath('img/favicon-16x16.png'));
+  $faviconLegacy = array('rel' => 'shortcut icon', 'href' => $this->basePath('favicon.ico'));
+  $faviconAppleTouch = array('rel' => 'apple-touch-icon', 'extras' => array('sizes' => '180x180'), 'href' => $this->basePath('img/apple-touch-icon.png'));
+  $faviconAppleMaskIcon = array('rel' => 'mask-icon', 'extras' => array('color' => '#5bbad5'), 'href' => $this->basePath('img/favicon.svg'));
+  
+  $this->headLink(array('rel' => 'icon', 'extras' => array('type' => 'image/svg+xml', 'sizes' => 'any' ), 'href' => $this->basePath('img/favicon.svg')));
+  
+  $this->headlink()->headLink($favicon32);
+  $this->headlink()->headLink($favicon16);
+  $this->headlink()->headLink($faviconLegacy);
+  $this->headlink()->headLink($faviconAppleTouch);
+  $this->headlink()->headLink($faviconAppleMaskIcon);
 
-  // $this->headLink()->prependStylesheet($this->basePath('css/style.css'))
-  //                 ->prependStylesheet($this->basePath('css/bootstrap.css'));
   $this->headLink()->prependStylesheet($this->basePath('css/base.css'))
 
 ?>
@@ -41,25 +44,25 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="../../../../img/zf-logo-mark.png" alt="" height="40px"></a>
+      <a class="navbar-brand" href="<?php echo $this->url('home'); ?>"><img src="../../../../img/zf-logo-mark.png" alt="" height="40px"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle Nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Startseite
+            <a class="nav-link" href="<?php echo $this->url('home'); ?>"><?php echo $this->translate('Startseite') ?>
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">UI</a>
+            <a class="nav-link" href="_ui">UI</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Documentation</a>
+            <a class="nav-link" href="#"><?php echo $this->translate('Dokumentation'); ?></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tests</a>
+            <a class="nav-link" href="#"><?php echo $this->translate('Tests'); ?></a>
           </li>
         </ul>
       </div>
@@ -74,22 +77,22 @@
         <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
           <ul class="list-inline mb-2">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#"><?php echo $this->translate('Über uns'); ?></a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Contact</a>
+              <a href="#"><?php echo $this->translate('Kontakt'); ?></a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Terms of Use</a>
+              <a href="#"><?php echo $this->translate('Nutzungsbedingungen'); ?></a>
             </li>
             <li class="list-inline-item">&sdot;</li>
             <li class="list-inline-item">
-              <a href="#">Privacy Policy</a>
+              <a href="#"><?php echo $this->translate('Datenschutz') ?></a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0"><?php echo $this->translate('&copy; dwLabs 2019. Alle Rechte vorbehalten.'); ?></p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">

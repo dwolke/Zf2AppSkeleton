@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZfMailer App\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-05 13:22+0200\n"
-"PO-Revision-Date: 2019-08-05 13:22+0200\n"
+"POT-Creation-Date: 2019-09-29 16:20+0200\n"
+"PO-Revision-Date: 2019-09-29 16:21+0200\n"
 "Last-Translator: Daniel Wolkenhauer <hello@dw-labs.de>\n"
 "Language-Team: Daniel Wolkenhauer <hello@dw-labs.de>\n"
 "Language: de_DE\n"
@@ -12,114 +12,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: translate\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../view/application/index/index.phtml:3
+#: ../view/application/index/index.phtml:5
+msgid "Willkommen zum Zend Framework 2"
+msgstr ""
+
+#: ../view/application/index/index.phtml:6
 #, php-format
 msgid ""
-"ZfMailer ist ein einfaches Modul zum Versand von E-Mails über das Zend "
-"Framework. Diese Version von ZfMailer läuft unter Zend Framework Version %s."
+"Herzlichen Glückwunsch, Deine App ist betriebsbereit! Diese Vorlage hilft "
+"Dir dabei, Deine Zend Framework 2 Anwendungen schnell zum Laufen zu bringen."
+"<br /><br />Aktuell hast Du die Version <strong>%s</strong> des Zend "
+"Frameworks installiert."
 msgstr ""
 
-#: ../view/application/index/index.phtml:10
-msgid "Funktionen"
-msgstr ""
-
-#: ../view/application/index/index.phtml:23
-msgid "Folge der Entwicklung"
-msgstr ""
-
-#: ../view/application/index/index.phtml:25
-msgid ""
-"ZfMailer wird ständig weiterentwickelt. Solltest Du Interesse haben, die "
-"Entwicklung zu verfolgen oder bei der Entwicklung aktiv mitzuwirken, steht "
-"dir der Quelltext auf Github zur Verfügung."
-msgstr ""
-
-#: ../view/application/index/index.phtml:26
-msgid "ZfMailer auf GitHub"
-msgstr ""
-
-#: ../view/application/index/index.phtml:33
-msgid "Hilfe &amp; Support"
-msgstr ""
-
-#: ../view/application/index/index.phtml:35
-#, php-format
-msgid ""
-"Solltest Du Hilfe bei der Verwendung des ZfMailers benötigen, kontaktiere "
-"uns einfach über %sSlack%s."
-msgstr ""
-
-#: ../view/error/404.phtml:1
+#: ../view/error/404.phtml:4
 msgid "Es trat ein 404 Fehler auf"
 msgstr ""
 
-#: ../view/error/404.phtml:12
+#: ../view/error/404.phtml:15
 msgid ""
 "Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
 msgstr ""
 
-#: ../view/error/404.phtml:15
+#: ../view/error/404.phtml:18
 msgid ""
 "Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
 "werden."
 msgstr ""
 
-#: ../view/error/404.phtml:18
+#: ../view/error/404.phtml:21
 msgid "Der angeforderte Controller ist nicht aufrufbar."
 msgstr ""
 
-#: ../view/error/404.phtml:21
+#: ../view/error/404.phtml:24
 msgid "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden."
 msgstr ""
 
-#: ../view/error/404.phtml:24
+#: ../view/error/404.phtml:27
 msgid ""
 "Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
 "Fehler aufgetreten ist."
 msgstr ""
 
-#: ../view/error/404.phtml:36
+#: ../view/error/404.phtml:39
 msgid "Controller"
 msgstr ""
 
-#: ../view/error/404.phtml:40
+#: ../view/error/404.phtml:43
 #, php-format
 msgid "wird aufgelöst in %s"
 msgstr ""
 
-#: ../view/error/404.phtml:51 ../view/error/index.phtml:8
+#: ../view/error/404.phtml:54 ../view/error/index.phtml:8
 msgid "Zusätzliche Informationen"
 msgstr ""
 
-#: ../view/error/404.phtml:54 ../view/error/404.phtml:73
+#: ../view/error/404.phtml:57 ../view/error/404.phtml:76
 #: ../view/error/index.phtml:11 ../view/error/index.phtml:30
 msgid "Datei"
 msgstr ""
 
-#: ../view/error/404.phtml:56 ../view/error/404.phtml:75
+#: ../view/error/404.phtml:59 ../view/error/404.phtml:78
 #: ../view/error/index.phtml:13 ../view/error/index.phtml:32
 msgid "Meldung"
 msgstr ""
 
-#: ../view/error/404.phtml:58 ../view/error/404.phtml:77
+#: ../view/error/404.phtml:61 ../view/error/404.phtml:80
 #: ../view/error/index.phtml:15 ../view/error/index.phtml:34
 msgid "Stapelüberwachung"
 msgstr ""
 
-#: ../view/error/404.phtml:67
+#: ../view/error/404.phtml:70
 msgid "Vorherige Ausnahmen"
 msgstr ""
 
-#: ../view/error/404.phtml:85 ../view/error/index.phtml:42
+#: ../view/error/404.phtml:88 ../view/error/index.phtml:42
 msgid ""
 "Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht "
 "über ausreichend Speicher, um diese anzuzeigen."
 msgstr ""
 
-#: ../view/error/404.phtml:93
+#: ../view/error/404.phtml:96
 msgid "Es ist keine Ausnahme verfügbar"
 msgstr ""
 
@@ -135,16 +111,40 @@ msgstr ""
 msgid "Es ist keine Ausnahme verfügbar."
 msgstr ""
 
-#: ../view/layout/layout.phtml:35
-msgid "ZfMailer"
+#: ../view/layout/layout.phtml:5
+msgid "App Skeleton"
 msgstr ""
 
-#: ../view/layout/layout.phtml:39
+#: ../view/layout/layout.phtml:54
 msgid "Startseite"
 msgstr ""
 
-#: ../view/layout/layout.phtml:48
-msgid "Alle Rechte vorbehalten."
+#: ../view/layout/layout.phtml:62
+msgid "Dokumentation"
+msgstr ""
+
+#: ../view/layout/layout.phtml:65
+msgid "Tests"
+msgstr ""
+
+#: ../view/layout/layout.phtml:80
+msgid "Über uns"
+msgstr ""
+
+#: ../view/layout/layout.phtml:84
+msgid "Kontakt"
+msgstr ""
+
+#: ../view/layout/layout.phtml:88
+msgid "Nutzungsbedingungen"
+msgstr ""
+
+#: ../view/layout/layout.phtml:92
+msgid "Datenschutz"
+msgstr ""
+
+#: ../view/layout/layout.phtml:95
+msgid "&copy; dwLabs 2019. Alle Rechte vorbehalten."
 msgstr ""
 
 #~ msgid "A 404 error occurred"
@@ -257,9 +257,6 @@ msgstr ""
 
 #~ msgid "Ping us on IRC"
 #~ msgstr "Schreiben Sie uns im IRC an"
-
-#~ msgid "Welcome to %sZend Framework 2%s"
-#~ msgstr "Willkommen zu dem %sZend Framework 2%s"
 
 #~ msgid ""
 #~ "Congratulations! You have successfully installed the %sZF2 Skeleton "
