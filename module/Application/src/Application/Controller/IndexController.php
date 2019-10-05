@@ -18,6 +18,9 @@ class IndexController extends AbstractActionController
 
   public function indexAction()
   {
+
+    throw new \Exception('Division durch Null.');
+
     return new ViewModel();
   }
   

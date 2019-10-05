@@ -1,53 +1,74 @@
-<h1><?php echo $this->translate('Ein Fehler ist aufgetreten.') ?></h1>
-<h2><?php echo $this->message ?></h2>
+<main role="main" class="flex-shrink-0">
+  <div class="container">
+    <h1 class="mt-5"><?php echo $this->translate('Ein Fehler ist aufgetreten.') ?></h1>
+    <p class="lead"><strong><?php echo $this->message ?></strong></p>
 
-<?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
+    <?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
+      <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
 
-  <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
-    <hr/>
-    <h2><?php echo $this->translate('Zusätzliche Informationen') ?>:</h2>
-    <h3><?php echo get_class($this->exception); ?></h3>
-    <dl>
-      <dt><?php echo $this->translate('Datei') ?>:</dt>
-      <dd><pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre></dd>
-      <dt><?php echo $this->translate('Meldung') ?>:</dt>
-      <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getMessage()) ?></pre></dd>
-      <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
-      <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) ?></pre></dd>
-    </dl>
-    <?php
-      $e = $this->exception->getPrevious();
-      $icount = 0;
-      if ($e) :
-    ?>
-      <hr/>
-      <h2><?php echo $this->translate('Vorherige Ausnahme(n)') ?>:</h2>
-      <ul class="unstyled">
-        <?php while($e) : ?>
-          <li>
-            <h3><?php echo get_class($e); ?></h3>
-            <dl>
-              <dt><?php echo $this->translate('Datei') ?>:</dt>
-              <dd><pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre></dd>
-              <dt><?php echo $this->translate('Meldung') ?>:</dt>
-              <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getMessage()) ?></pre></dd>
-              <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
-              <dd><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre></dd>
-            </dl>
-          </li>
-          <?php
-            $e = $e->getPrevious();
-            $icount += 1;
-            if ($icount >= 50) {
-              echo sprintf($this->translate('Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht über ausreichend Speicher, um diese anzuzeigen.'), '<li>', '</li>');
-              break;
-            }
-            endwhile;
+        <hr/>
+
+        <div class="card">
+          <div class="card-header"><h5 class="card-title"><?php echo $this->translate('Zusätzliche Informationen'); ?></h5></div>
+          <div class="card-body">
+
+            <h4 class="card-title"><?php echo get_class($this->exception); ?></h4><br>
+
+            <h5 class="card-title"><?php echo $this->translate('Datei'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre></p>
+
+            <h5 class="card-title"><?php echo $this->translate('Meldung'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getMessage()) ?></pre></p>
+
+            <h5 class="card-title"><?php echo $this->translate('Stapelüberwachung'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) ?></pre></p>
+                        
+          </div>
+        </div>
+
+        <?php
+          $e = $this->exception->getPrevious();
+          $icount = 0;
+          if ($e) :
         ?>
-      </ul>
-    <?php endif; ?>
-  <?php else: ?>
-    <h3><?php echo $this->translate('Es ist keine Ausnahme verfügbar.') ?></h3>
-  <?php endif ?>
+          <br>
+          <p><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php echo $this->translate('Vorherige Ausnahme(n)'); ?></button></p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <h3 class="card-title"><?php echo $this->translate('Vorherige Ausnahme(n)') ?></h3>
+              <ul class="list-group list-group-flush">
+                <?php while($e) : ?>
+                  <li class="list-group-item">
+                    <h4 class="card-title"><?php echo get_class($e); ?></h4><br>
+                    <h5 class="card-title"><?php echo $this->translate('Datei'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre></p>
+                    <h5 class="card-title"><?php echo $this->translate('Meldung'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getMessage()) ?></pre></p>
+                    <h5 class="card-title"><?php echo $this->translate('Stapelüberwachung'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre></p>
+                  </li>
+                  <?php
+                    $e = $e->getPrevious();
+                    $icount += 1;
+                    if ($icount >= 50) {
+                      echo sprintf($this->translate('Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht über ausreichend Speicher, um diese anzuzeigen.'), '<li class="list-group-item">', '</li>');
+                      break;
+                    }
+                  endwhile;
+                ?>
+              </ul>
+            </div>
+          </div>
 
-<?php endif ?>
+        <?php endif; ?>
+
+      <?php else: ?>
+        <h3><?php echo $this->translate('Es ist keine Ausnahme verfügbar.') ?></h3>
+      <?php endif ?>
+    <?php endif ?>
+    
+    <br>
+    <p>Zurück zur <a href="<?php echo $this->url('home'); ?>"><?php echo $this->translate('Startseite') ?></p>
+
+  </div>
+</main>
