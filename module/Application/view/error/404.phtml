@@ -1,130 +1,126 @@
+<?php $this->headTitle('Page not found'); ?>
+
 <main role="main" class="flex-shrink-0">
   <div class="container">
     <h1 class="mt-5">404</h1>
     <p class="lead"><strong><?php echo $this->translate('Das ist ein Fehler.'); ?></strong></p>
-    <section>
-      <p><?php echo $this->message ?>&nbsp;<span class="text-muted"><?php echo $this->translate('Mehr wissen wir auch nicht.') ?></span></p>
-    </section>
-    <section>
-      <div class="card">
-        <div class="card-header"><h5 class="card-title"><?php echo $this->translate('Zusätzliche Informationen'); ?></h5></div>
-        <div class="card-body">
-
-          <?php if (isset($this->reason) && $this->reason): ?>
-            <?php
-
-              $reasonMessage= '';
-
-              switch ($this->reason) {
-                case 'error-controller-cannot-dispatch':
-                  $reasonMessage = $this->translate('Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten.');
-                  break;
-                case 'error-controller-not-found':
-                  $reasonMessage = $this->translate('Der angeforderte Controller konnte keiner Controller Klasse zugeordnet werden.');
-                  break;
-                case 'error-controller-invalid':
-                  $reasonMessage = $this->translate('Der angeforderte Controller ist nicht aufrufbar.');
-                  break;
-                case 'error-router-no-match':
-                  $reasonMessage = $this->translate('Für die angeforderte URL konnte keine Übereinstimmung gefunden werden.');
-                  break;
-                default:
-                  $reasonMessage = $this->translate('Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 Fehler aufgetreten ist.');
-                  break;
-              }
-            ?>
-            <h5 class="card-title"><?php echo $this->translate('Grund: '); ?></h5>
-            <p class="card-text"><?php echo $reasonMessage ?></p>
-
-          <?php endif  ?>
-
-          <?php if (isset($this->controller) && $this->controller): ?>
-
-            <h5 class="card-title"><?php echo $this->translate('Controller: ') ?></h5>
-            <p>
-              <code><?php echo $this->escapeHtml($this->controller) ?></code>
-              <?php
-                  if (isset($this->controller_class) && $this->controller_class && $this->controller_class != $this->controller) {
-                    echo '(<strong>' . sprintf($this->translate('Fehler:</strong> %s'), $this->escapeHtml($this->controller_class)) . ')';
-                  }
-                ?>
-            </p>
-
-          <?php endif ?>
-
-        </div>
-      </div>
-    </section>
-
     
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.</p>
-    <p>Back to <a href="/docs/4.3/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+    <div class="card">
+      <div class="card-header"><h5 class="card-title"><?php echo $this->message ?></h5></div>
+      <div class="card-body">
+
+        <?php if (isset($this->reason) && $this->reason): ?>
+          <?php
+
+            $reasonMessage= '';
+
+            switch ($this->reason) {
+              case 'error-controller-cannot-dispatch':
+                $reasonMessage = $this->translate('Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten.');
+                break;
+              case 'error-controller-not-found':
+                $reasonMessage = $this->translate('Der angeforderte Controller konnte keiner Controller Klasse zugeordnet werden.');
+                break;
+              case 'error-controller-invalid':
+                $reasonMessage = $this->translate('Der angeforderte Controller ist nicht aufrufbar.');
+                break;
+              case 'error-router-no-match':
+                $reasonMessage = $this->translate('Für die angeforderte URL konnte keine Übereinstimmung gefunden werden.');
+                break;
+              default:
+                $reasonMessage = $this->translate('Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 Fehler aufgetreten ist.');
+                break;
+            }
+          ?>
+          <h5 class="card-title"><?php echo $this->translate('Grund: '); ?></h5>
+          <p class="card-text"><?php echo $reasonMessage ?></p>
+
+        <?php endif  ?>
+
+        <?php if (isset($this->controller) && $this->controller): ?>
+
+          <h5 class="card-title"><?php echo $this->translate('Controller: ') ?></h5>
+          <p>
+            <code><?php echo $this->escapeHtml($this->controller) ?></code>
+            <?php
+                if (isset($this->controller_class) && $this->controller_class && $this->controller_class != $this->controller) {
+                  echo '(<strong>' . sprintf($this->translate('Fehler:</strong> %s'), $this->escapeHtml($this->controller_class)) . ')';
+                }
+              ?>
+          </p>
+
+        <?php endif ?>
+
+      </div>
+    </div>
+
+    <?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
+      <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
+
+        <hr/>
+
+        <div class="card">
+          <div class="card-header"><h5 class="card-title"><?php echo $this->translate('Zusätzliche Informationen'); ?></h5></div>
+          <div class="card-body">
+
+            <h4 class="card-title"><?php echo get_class($this->exception); ?></h4><br>
+
+            <h5 class="card-title"><?php echo $this->translate('Datei'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre></p>
+
+            <h5 class="card-title"><?php echo $this->translate('Meldung'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getMessage()) ?></pre></p>
+
+            <h5 class="card-title"><?php echo $this->translate('Stapelüberwachung'); ?>:</h5>
+            <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($this->exception->getTraceAsString()) ?></pre></p>
+                        
+          </div>
+        </div>
+
+        <?php
+          $e = $this->exception->getPrevious();
+          $icount = 0;
+          if ($e) :
+        ?>
+          <br>
+          <p><button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><?php echo $this->translate('Vorherige Ausnahme(n)'); ?></button></p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <h3 class="card-title"><?php echo $this->translate('Vorherige Ausnahme(n)') ?></h3>
+              <ul class="list-group list-group-flush">
+                <?php while($e) : ?>
+                  <li class="list-group-item">
+                    <h4 class="card-title"><?php echo get_class($e); ?></h4><br>
+                    <h5 class="card-title"><?php echo $this->translate('Datei'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre></p>
+                    <h5 class="card-title"><?php echo $this->translate('Meldung'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getMessage()) ?></pre></p>
+                    <h5 class="card-title"><?php echo $this->translate('Stapelüberwachung'); ?>:</h5>
+                    <p class="card-text"><pre class="prettyprint linenums"><?php echo $this->escapeHtml($e->getTraceAsString()) ?></pre></p>
+                  </li>
+                  <?php
+                    $e = $e->getPrevious();
+                    $icount += 1;
+                    if ($icount >= 50) {
+                      echo sprintf($this->translate('Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht über ausreichend Speicher, um diese anzuzeigen.'), '<li class="list-group-item">', '</li>');
+                      break;
+                    }
+                  endwhile;
+                ?>
+              </ul>
+            </div>
+          </div>
+
+        <?php endif; ?>
+
+      <?php else: ?>
+        <hr>
+        <h3><?php echo $this->translate('Es ist keine Ausnahme verfügbar.') ?></h3>
+      <?php endif ?>
+    <?php endif ?>
+    
+    <br>
+    <p>Zurück zur <a href="<?php echo $this->url('home'); ?>"><?php echo $this->translate('Startseite') ?></a></p>
+
   </div>
 </main>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col">
-      
-
-        <?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
-        <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
-          <hr/>
-          <h2><?php echo $this->translate('Zusätzliche Informationen') ?>:</h2>
-          <h3><?php echo get_class($this->exception); ?></h3>
-          <dl>
-            <dt><?php echo $this->translate('Datei') ?>:</dt>
-            <dd><pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre></dd>
-            <dt><?php echo $this->translate('Meldung') ?>:</dt>
-            <dd><pre class="prettyprint linenums"><?php echo $this->exception->getMessage() ?></pre></dd>
-            <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
-            <dd><pre class="prettyprint linenums"><?php echo $this->exception->getTraceAsString() ?></pre></dd>
-          </dl>
-          <?php
-            $e = $this->exception->getPrevious();
-            $icount = 0;
-            if ($e) :
-          ?>
-          <hr/>
-          <h2><?php echo $this->translate('Vorherige Ausnahmen') ?>:</h2>
-          <ul class="unstyled">
-          <?php while($e) : ?>
-            <li>
-              <h3><?php echo get_class($e); ?></h3>
-              <dl>
-                <dt><?php echo $this->translate('Datei') ?>:</dt>
-                <dd><pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre></dd>
-                <dt><?php echo $this->translate('Meldung') ?>:</dt>
-                <dd><pre class="prettyprint linenums"><?php echo $e->getMessage() ?></pre></dd>
-                <dt><?php echo $this->translate('Stapelüberwachung') ?>:</dt>
-                <dd><pre class="prettyprint linenums"><?php echo $e->getTraceAsString() ?></pre></dd>
-              </dl>
-            </li>
-            <?php
-              $e = $e->getPrevious();
-              $icount += 1;
-              if ($icount >=50) {
-                echo sprintf($this->translate('Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht über ausreichend Speicher, um diese anzuzeigen.'), '<li>', '</li>');
-                break;
-              }
-              endwhile;
-            ?>
-          </ul>
-          <?php endif; ?>
-        <?php else: ?>
-          <h3><?php echo $this->translate('Es ist keine Ausnahme verfügbar') ?></h3>
-        <?php endif ?>
-        <?php endif ?>
-
-    </div>
-  
-  </div>
-</div>
-
-
-
-
-
-
-

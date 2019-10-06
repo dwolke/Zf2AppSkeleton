@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZfMailerApp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-29 16:21+0200\n"
-"PO-Revision-Date: 2019-09-29 16:26+0200\n"
+"POT-Creation-Date: 2019-10-06 11:16+0200\n"
+"PO-Revision-Date: 2019-10-06 11:16+0200\n"
 "Last-Translator: Daniel Wolkenhauer <hello@dw-labs.de>\n"
 "Language-Team: dwLabs <hello@dw-labs.de>\n"
 "Language: en_US\n"
@@ -32,97 +32,95 @@ msgstr ""
 "the version <strong>%s</strong> of Zend Framework installed."
 
 #: ../view/error/404.phtml:4
-msgid "Es trat ein 404 Fehler auf"
-msgstr "A 404 error occured"
+msgid "Das ist ein Fehler."
+msgstr "That’s an error."
 
-#: ../view/error/404.phtml:15
+#: ../view/error/404.phtml:17
 msgid ""
 "Der angeforderte Controller war nicht in der Lage die Anfrage zu verarbeiten."
 msgstr "The requested Controller was unable to dispatch the request."
 
-#: ../view/error/404.phtml:18
+#: ../view/error/404.phtml:20
 msgid ""
 "Der angeforderte Controller konnte keiner Controller Klasse zugeordnet "
 "werden."
 msgstr ""
 "The requested Controller could not be mapped to an existing controller class."
 
-#: ../view/error/404.phtml:21
+#: ../view/error/404.phtml:23
 msgid "Der angeforderte Controller ist nicht aufrufbar."
 msgstr "The requrested Controller is not dispatchable."
 
-#: ../view/error/404.phtml:24
+#: ../view/error/404.phtml:26
 msgid "Für die angeforderte URL konnte keine Übereinstimmung gefunden werden."
 msgstr "The requested Url could not be matched by routing."
 
-#: ../view/error/404.phtml:27
+#: ../view/error/404.phtml:29
 msgid ""
 "Zu diesem Zeitpunkt ist es uns nicht möglich zu bestimmen, warum ein 404 "
 "Fehler aufgetreten ist."
 msgstr "We really don't know, why the error occured."
 
-#: ../view/error/404.phtml:39
-msgid "Controller"
-msgstr "Controller"
+#: ../view/error/404.phtml:33
+msgid "Grund: "
+msgstr "Reason:"
 
-#: ../view/error/404.phtml:43
+#: ../view/error/404.phtml:40
+msgid "Controller: "
+msgstr "Controller:"
+
+#: ../view/error/404.phtml:45
 #, php-format
-msgid "wird aufgelöst in %s"
-msgstr "resolves to %s"
+msgid "Fehler:</strong> %s"
+msgstr "Error:</strong> %s"
 
-#: ../view/error/404.phtml:54 ../view/error/index.phtml:8
+#: ../view/error/404.phtml:61 ../view/error/index.phtml:12
 msgid "Zusätzliche Informationen"
 msgstr "Additional information"
 
-#: ../view/error/404.phtml:57 ../view/error/404.phtml:76
-#: ../view/error/index.phtml:11 ../view/error/index.phtml:30
+#: ../view/error/404.phtml:66 ../view/error/404.phtml:92
+#: ../view/error/index.phtml:17 ../view/error/index.phtml:43
 msgid "Datei"
 msgstr "File"
 
-#: ../view/error/404.phtml:59 ../view/error/404.phtml:78
-#: ../view/error/index.phtml:13 ../view/error/index.phtml:32
+#: ../view/error/404.phtml:69 ../view/error/404.phtml:94
+#: ../view/error/index.phtml:20 ../view/error/index.phtml:45
 msgid "Meldung"
 msgstr "Message"
 
-#: ../view/error/404.phtml:61 ../view/error/404.phtml:80
-#: ../view/error/index.phtml:15 ../view/error/index.phtml:34
+#: ../view/error/404.phtml:72 ../view/error/404.phtml:96
+#: ../view/error/index.phtml:23 ../view/error/index.phtml:47
 msgid "Stapelüberwachung"
 msgstr "Stack trace"
 
-#: ../view/error/404.phtml:70
-msgid "Vorherige Ausnahmen"
-msgstr "Previous Exception"
+#: ../view/error/404.phtml:84 ../view/error/404.phtml:87
+#: ../view/error/index.phtml:35 ../view/error/index.phtml:38
+msgid "Vorherige Ausnahme(n)"
+msgstr "Previous Exception(s)"
 
-#: ../view/error/404.phtml:88 ../view/error/index.phtml:42
+#: ../view/error/404.phtml:103 ../view/error/index.phtml:54
 msgid ""
 "Es sind noch weitere Ausnahmen aufgetreten, aber das System verfügt nicht "
 "über ausreichend Speicher, um diese anzuzeigen."
 msgstr ""
 "There may be more exceptions, but we don't have enough space to process them."
 
-#: ../view/error/404.phtml:96
-msgid "Es ist keine Ausnahme verfügbar"
-msgstr "No Exception available"
-
-#: ../view/error/index.phtml:1
-msgid "Ein Fehler ist aufgetreten."
-msgstr "An error occured."
-
-#: ../view/error/index.phtml:24
-msgid "Vorherige Ausnahme(n)"
-msgstr "Previous Exception(s)"
-
-#: ../view/error/index.phtml:50
+#: ../view/error/404.phtml:116 ../view/error/index.phtml:66
 msgid "Es ist keine Ausnahme verfügbar."
 msgstr "No Exception available."
+
+#: ../view/error/404.phtml:121 ../view/error/index.phtml:71
+#: ../view/layout/layout.phtml:54
+msgid "Startseite"
+msgstr "Home"
+
+#: ../view/error/index.phtml:3
+msgid "Ein Fehler ist aufgetreten."
+msgstr "An error occured."
 
 #: ../view/layout/layout.phtml:5
 msgid "App Skeleton"
 msgstr "App Skeleton"
-
-#: ../view/layout/layout.phtml:54
-msgid "Startseite"
-msgstr "Home"
 
 #: ../view/layout/layout.phtml:62
 msgid "Dokumentation"
@@ -151,6 +149,16 @@ msgstr "Privacy Policy"
 #: ../view/layout/layout.phtml:95
 msgid "&copy; dwLabs 2019. Alle Rechte vorbehalten."
 msgstr "&copy; Your Website 2019. All Rights Reserved."
+
+#, php-format
+#~ msgid "wird aufgelöst in %s"
+#~ msgstr "resolves to %s"
+
+#~ msgid "Vorherige Ausnahmen"
+#~ msgstr "Previous Exception"
+
+#~ msgid "Es ist keine Ausnahme verfügbar"
+#~ msgstr "No Exception available"
 
 #, php-format
 #~ msgid ""
