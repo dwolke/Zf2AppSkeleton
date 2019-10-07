@@ -1,15 +1,27 @@
 {
-    "name": "dwolke/zf2appskeleton",
-    "description": "App Skeleton für Zend Framework 2",
+    "name": "dwolke/zfappskeleton",
+    "description": "App Skeleton for the Zend Framework",
+    "version": "2.0.0",
     "license": "MIT",
+    "type": "project",
     "keywords": [
         "zend framework",
+        "App Skeleton",
+        "mvc",
         "zf2",
-        "App Skeleton"
+        "zf3"
     ],
     "homepage": "http://dw-labs.de",
+    "authors": [
+        {
+            "name": "Daniel Wolkenhauer",
+            "email": "hello@dw-labs.de",
+            "homepage": "http://dw-labs.de",
+            "role": "Developer"
+        }
+    ],
     "require": {
-        "php": ">=7.1",
+        "php": "^5.6 || ^7.0",
         "zendframework/zendframework": "~2.4"
     },
     "require-dev": {

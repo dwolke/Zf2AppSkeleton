@@ -1,6 +1,6 @@
 <?php
 /**
- * Zf2 Skeleton App
+ * ZF App Skeleton
  *
  * @author     Daniel Wolkenhauer <hello@dw-labs.de>
  * @copyright  Copyright (c) 2012-2019 Daniel Wolkenhauer
